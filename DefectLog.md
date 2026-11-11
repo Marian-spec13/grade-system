@@ -1,0 +1,10 @@
+# PSP Defect Log - Student Grade Management System
+
+| Defect # | Date | Phase Injected | Phase Removed | Fix Time (min) | Description & Root Cause | Solution / Resolution |
+| :---: | :---: | :---: | :---: | :---: | :--- | :--- |
+| **1** | 2026-10-22 | Requirements | Design | 15 | Misinterpreted boundary rules: assumed passing grade started at 50 instead of 40 based on assignment specification. | Updated design logic table and grade scale boundaries (A: >=70, B: 60-69, C: 50-59, D: 40-49, F: <40). |
+| **2** | 2026-10-25 | Implementation | Implementation | 10 | `TypeError` in average calculation: marks were collected as strings from `input()` without converting to float. | Wrapped user input in `float()` casting during collection loop in `student_grades.py`. |
+| **3** | 2026-10-25 | Implementation | Implementation | 10 | Unhandled exception: program crashed with `ValueError` when non-numeric text was entered for student marks. | Added `try-except ValueError` block inside a `while` loop to re-prompt user until a valid mark is entered. |
+| **4** | 2026-10-28 | Environment Setup | Testing | 45 | PowerShell threw `CommandNotFoundException` for `python` command due to missing PATH settings and execution alias conflicts. | Configured Python installer PATH setting, disabled Windows App Execution Aliases, and restarted terminal environment. |
+| **5** | 2026-10-29 | Testing | Testing | 5 | Input validation check: verified program calculates correct averages for non-integer marks without rounding errors. | Verified calculation logic via test run for Asha (Marks: 75, 92, 81 -> Avg: 82.67, Grade: B). |
+| **6** | 2026-10-29 | Testing | Testing | 10 | Output formatting issue: student average display showed unformatted precision (e.g., `82.66666666666667`). | Formatted average string using `:.2f` precision (e.g., `82.67`) in the final CLI summary output. |
