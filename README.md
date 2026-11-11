@@ -5,7 +5,7 @@
 **Programming Language:** Python  
 **Start Date:** Thursday, 22 October 2026  
 **End Date:** Thursday, 29 October 2026  
-**Code Repository:** [GitHub - Student Grade System](https://github.com/delivery-application-basic/grade-_system-)
+**Code Repository:** [GitHub - Student Grade System](https://github.com/Marian-spec13/grade-system)
 
 ---
 
